@@ -1,9 +1,9 @@
-import CropRecognition from './pages/CropRecognition/CropRecognition';
+import DiseaseRecognition from './pages/DiseaseRecognition/DiseaseRecognition';
 import './App.css';
 function App() {
   return (
     <div className="App">
-      <CropRecognition />
+      <DiseaseRecognition />
     </div>
   );
 }

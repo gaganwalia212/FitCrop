@@ -8,27 +8,27 @@ import imgLogo from '../../assets/file-image-solid.svg';
 const DragAndDrop = (props) => {
   const wrapperRef = useRef(null);
 
-  const [file, setFile] = useState(null);
-
+  const [image, setImage] = useState(null);
+  const [imageURL,setImageURL] = useState(null);
   const onDragEnter = () => wrapperRef.current.classList.add('dragover');
   const onDragLeave = () => wrapperRef.current.classList.remove('dragover');
   const onDrop = () => wrapperRef.current.classList.remove('dragover');
 
   const onFileDrop = (e) => {
-    const newFile = e.target.files[0];
-    if (newFile) {
-      console.log('newfile', newFile);
-      setFile(newFile);
+    if (e.target.files && e.target.files[0]) {
+      setImage(e.target.files[0])
+      setImageURL(URL.createObjectURL(e.target.files[0]));
     }
   };
 
   useEffect(() => {
-    props.onFileChange(file);
-    console.log('use Effect called')
-  }, [props, file]);
+    props.onChange(imageURL);
+    console.log('use Effect called');
+  }, [props, imageURL]);
 
   const fileRemove = () => {
-    setFile(null);
+    setImage(null);
+    setImageURL(null);
   };
   return (
     <>
@@ -43,18 +43,18 @@ const DragAndDrop = (props) => {
           <img src={uploadImg} alt="" />
           <p>Drag and Drop your files here</p>
         </div>
-        <input type="file" name="file" value="" onChange={onFileDrop} />
+        <input type="file" name="file" onChange={onFileDrop} />
       </div>
 
-      {file != null ? (
+      {image != null ? (
         <div className="drop-file-preview">
           <p className="drop-file-preview__title">Ready to upload</p>
           {
             <div className="drop-file-preview__item">
               <img src={imgLogo} alt="" />
               <div className="drop-file-preview__item__info">
-                <p>{file.name}</p>
-                <p>{file.size}B</p>
+                <p>{image.name}</p>
+                <p>{image.size}B</p>
               </div>
               <span
                 className="drop-file-preview__item__del"
