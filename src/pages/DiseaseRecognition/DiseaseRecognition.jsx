@@ -64,9 +64,9 @@ const DiseaseRecognition = () => {
                     <option value="Apple">Apple</option>
                     <option value="Cherry">Cherry</option>
                     <option value="Corn">Corn</option>
-                    <option value="Grapes">Grapes</option>
+                    <option value="Grape">Grapes</option>
                     <option value="Peach">Peach</option>
-                    <option value="Bell Pepper">Bell Pepper</option>
+                    <option value="PepperBell">Bell Pepper</option>
                     <option value="Tomato">Tomato</option>
                     <option value="Potato">Potato</option>
                   </select>

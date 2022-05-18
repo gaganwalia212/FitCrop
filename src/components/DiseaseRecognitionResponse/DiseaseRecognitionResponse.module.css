@@ -1,0 +1,41 @@
+.container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    /* border:1px solid red; */
+    width : 500px;
+    margin : auto;
+    padding : 20px 0;
+    margin-top : 30px;
+    background-color: rgb(247, 243, 243);
+    border-radius: 15px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.head{
+    font-weight: 700;
+}
+.image{
+    width : 200px;
+    height : 200px;
+
+}
+
+table,th,td{    
+    text-align:center;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th,td{
+    padding : 3px;
+}
+
+.result{
+    margin : 5px;
+    font-weight : 700;
+}
+.result span{
+    color : blue;
+}
