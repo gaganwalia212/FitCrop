@@ -39,7 +39,7 @@ const FertilizerRecommendationForm = (props) => {
             <option value="Barley">Barley</option>
             <option value="Wheat">Wheat</option>
             <option value="Millets">Millets</option>
-            <option value="Oil Seeds">Oil Seeds</option>
+            <option value="Oil seeds">Oil Seeds</option>
             <option value="Pulses">Pulses</option>
             <option value="Ground Nuts">Ground Nuts</option>
           </select>
@@ -59,7 +59,7 @@ const FertilizerRecommendationForm = (props) => {
       </section>
       {isLoading && <Loading />}
       {!isLoading && dataLoaded && (
-        <p className={classes.result}> Predicted Fertilizer is : {result}</p>
+        <p className={classes.result}> Most Suitable Fertilizer is : <span className={classes.result_val}>{result}</span></p>
       )}
       <div className={classes.divBtn}>
         <button type="submit" className={classes.btn}>

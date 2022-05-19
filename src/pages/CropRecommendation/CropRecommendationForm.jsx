@@ -19,30 +19,24 @@ const CropRecommendationForm = (props) => {
           <input className={classes.input} name="K" type="number" />
         </div>
         <div className={classes.div__input}>
-          <label htmlFor="temp">Temperature</label>
-          <span>
-            <input
-              className={classes.input}
-              name="temp"
-              type="number"
-              step="0.001"
-            />
-            °C
-          </span>
+          <label htmlFor="temp">Temperature (°C)</label>
+          <input
+            className={classes.input}
+            name="temp"
+            type="number"
+            step="0.001"
+          />
         </div>
         <div className={classes.div__input}>
-          <label htmlFor="hum">Humidity</label>
-          <span>
-            <input
-              className={classes.input}
-              name="hum"
-              type="number"
-              step="0.001"
-              min="0"
-              max="100"
-            />
-            %
-          </span>
+          <label htmlFor="hum">Humidity (%)</label>
+          <input
+            className={classes.input}
+            name="hum"
+            type="number"
+            step="0.001"
+            min="0"
+            max="100"
+          />
         </div>
         <div className={classes.div__input}>
           <label htmlFor="ph">pH value</label>
@@ -56,21 +50,18 @@ const CropRecommendationForm = (props) => {
           />
         </div>
         <div className={classes.div__input}>
-          <label htmlFor="rain">Rainfall</label>
-          <span>
-            <input
-              className={classes.input}
-              name="rain"
-              type="number"
-              step="0.001"
-            />
-            mm
-          </span>
+          <label htmlFor="rain">Rainfall (mm)</label>
+          <input
+            className={classes.input}
+            name="rain"
+            type="number"
+            step="0.001"
+          />
         </div>
       </section>
       {isLoading && <Loading />}
       {!isLoading && dataLoaded && (
-        <p className={classes.result}> Predicted Crop is : {result}</p>
+        <p className={classes.result}> Predicted Crop is : <span className={classes.result_val}>{result}</span></p>
       )}
       <div className={classes.divBtn}>
         <button type="submit" className={classes.btn}>

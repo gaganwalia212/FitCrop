@@ -17,10 +17,10 @@ const CropRecommendation = () => {
       N: event.target.N.value,
       P: event.target.P.value,
       K: event.target.K.value,
-      temp: event.target.temp.value,
-      hum: event.target.hum.value,
+      temperature: event.target.temp.value,
+      humidity: event.target.hum.value,
       ph: event.target.ph.value,
-      rain: event.target.rain.value,
+      rainfall: event.target.rain.value,
     };
 
     // console.log(event.target.N.value);
@@ -50,8 +50,7 @@ const CropRecommendation = () => {
         'http://localhost:5000/crop_recommend',
         formData
       );
-      // setResult(bckend_data.data.result);
-      setResult('HELLO');
+      setResult(bckend_data.data.result);
       setDataLoaded(true);
       setIsLoading(false);
       console.log(bckend_data.data);

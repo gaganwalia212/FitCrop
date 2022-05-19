@@ -21,30 +21,9 @@ const FertilizerRecommendation = () => {
       "Crop Type": event.target.crop_type.value,
       "Nitrogen": event.target.N.value,
       "Potassium": event.target.K.value,
-      "Phosphorus": event.target.P.value,
+      "Phosphorous": event.target.P.value,
     };
 
-    // console.log(event.target.N.value);
-    // console.log(event.target.P);
-    // console.log(event.target.K);
-    // console.log(event.target.temp);
-    // console.log(event.target.hum);
-    // console.log(event.target.ph);
-    // console.log(event.target.rain);
-
-    // console.log(event.target.file);
-    // console.log(event.target.crop);
-    // console.log(file)
-
-    // const formData = new FormData();
-    // formData.append('N',event.target.N)
-    // formData.append('file',event.target.file)
-    // formData.append('crop',event.target.crop)
-    // formData.append()
-    // formData.append('file', file);
-    // formData.append('crop', event.target[1].value);
-    // console.log(formData);
-    // console.log(formData.get('file'));
     try {
       setIsLoading(true);
       const bckend_data = await axios.post(
@@ -52,7 +31,7 @@ const FertilizerRecommendation = () => {
         formData
       );
       // setResult(bckend_data.data.result);
-      setResult('HELLO');
+      setResult(bckend_data.data.result);
       setDataLoaded(true);
       setIsLoading(false);
       console.log(bckend_data.data);
