@@ -51,6 +51,11 @@ label {
   color: blue;
 }
 
+.result_val{
+  font-weight : 700;
+  text-transform: uppercase;
+}
+
 .divBtn {
   margin-top: 20px;
   text-align: center;

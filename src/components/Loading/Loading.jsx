@@ -2,7 +2,7 @@ import React from 'react'
 
 const Loading = () => {
   return (
-    <div>Loading</div>
+    <div style={{textAlign:'center'}}>Loading...</div>
   )
 }
 

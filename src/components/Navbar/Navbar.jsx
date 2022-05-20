@@ -6,12 +6,12 @@ const Navbar = () => {
     <nav className="nav">
       <div className="title">
         <NavLink className={(isActive) => 'title_link'} to="/">
-          FitCrop
+          FitCROP
         </NavLink>
       </div>
       <div className="nav_links">
         <NavLink
-          to="/"
+          to="/crop_recognition"
           className={({isActive}) => ('link ' + (isActive===true ? 'selected' : ''))}
         >
           Crop Recognition

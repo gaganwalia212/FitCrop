@@ -1,6 +1,7 @@
 import DiseaseRecognition from './pages/DiseaseRecognition/DiseaseRecognition';
 import CropRecommendation from './pages/CropRecommendation/CropRecommendation';
 import FertilizerRecommendation from './pages/FertilizerRecommendation/FertilizerRecommendation';
+import CropRecognition from './pages/CropRecognition/CropRecognition'
 import Navbar from './components/Navbar/Navbar';
 import { Route, Routes } from 'react-router-dom';
 import MainPage from './pages/MainPage/MainPage';
@@ -11,6 +12,8 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" exact element={<MainPage />} />
+        <Route path="/crop_recognition" element={<CropRecognition />} />
+
         <Route
           path="/fertilizer_recommend"
           element={<FertilizerRecommendation />}
